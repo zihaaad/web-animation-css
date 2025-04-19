@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap");
+
+body {
+  background-color: #000000de;
+  color: #fff;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
