@@ -21,7 +21,7 @@ body {
   align-items: center;
   font-size: 3rem;
   background-color: yellowgreen;
-  border: 2px solid green;
+  border: 2px solid lightgreen;
 }
 
 #translate1 {
@@ -52,7 +52,7 @@ body {
 
 .rotate-container div {
   background-color: lightsalmon;
-  border: 1px solid orange;
+  border: 1px solid lightpink;
 }
 
 .rotate-container > p {
@@ -78,4 +78,40 @@ body {
 
 #rotate5 {
   transform: rotate(320deg);
+}
+
+.scale-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.scale-container div {
+  background-color: lightseagreen;
+  border: 1px solid lightskyblue;
+}
+
+.scale-container > p {
+  flex-basis: 100%;
+  margin: 10rem 0 5rem 0;
+}
+
+#scale1 {
+  transform: scale(2, 1.4);
+}
+
+#scale2 {
+  transform: scale(0.8, 1.2);
+}
+
+#scale3 {
+  transform: scaleX(1.4) scaleY(2);
+}
+
+#scale4 {
+  transform: scale(1.1);
+}
+
+#scale5 {
+  transform: scale(1.5, 1.5);
 }
