@@ -12,10 +12,11 @@ body {
   box-sizing: border-box;
 }
 
-.translate-container div {
+.container div {
   width: 100px;
   height: 100px;
   display: flex;
+  margin: 0 2rem;
   justify-content: center;
   align-items: center;
   font-size: 3rem;
@@ -41,4 +42,40 @@ body {
 
 #translate5 {
   transform: translateX(600px) translateY(-250px);
+}
+
+.rotate-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.rotate-container div {
+  background-color: lightsalmon;
+  border: 1px solid orange;
+}
+
+.rotate-container > p {
+  flex-basis: 100%;
+  margin: 2rem 0 3rem 0;
+}
+
+#rotate1 {
+  transform: rotate(25deg);
+}
+
+#rotate2 {
+  transform: rotate(120deg);
+}
+
+#rotate3 {
+  transform: rotate(75deg);
+}
+
+#rotate4 {
+  transform: rotate(160deg);
+}
+
+#rotate5 {
+  transform: rotate(320deg);
 }
