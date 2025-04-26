@@ -6,7 +6,39 @@ body {
   font-family: "Special Gothic Expanded One", sans-serif;
   font-size: 20px;
   text-align: center;
-  margin: 0;
+  max-width: 1280px;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
+}
+
+.translate-container div {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  background-color: yellowgreen;
+  border: 2px solid green;
+}
+
+#translate1 {
+  transform: translate(200px, 180px);
+}
+
+#translate2 {
+  transform: translate(400px, -50px);
+}
+
+#translate3 {
+  transform: translate(400px, 50px);
+}
+
+#translate4 {
+  transform: translateX(800px) translateY(-200px);
+}
+
+#translate5 {
+  transform: translateX(600px) translateY(-250px);
 }
