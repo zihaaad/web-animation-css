@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap");
+
+:root {
+  --size: 300px;
+}
+
+body {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  display: grid;
+  place-content: center;
+  min-height: 80vh;
+}
+
+.cube-container {
+  perspective: 1000px;
+  width: var(--size);
+  height: var(--size);
+  margin-top: 6rem;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  border-radius: 1rem;
+  transform: rotateX(-15deg) rotateY(15deg);
+}
+
+.face {
+  position: absolute;
+  border: 1px solid rgba(142, 142, 142, 0.683);
+  border-radius: 4px;
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.1);
+  width: var(--size);
+  height: var(--size);
+  line-height: var(--size);
+  text-align: center;
+  font-size: 1.25rem;
+  background-color: #fff;
+  opacity: 0.8;
+}
+
+.front {
+  transform: translateZ(150px);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(150px);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(150px);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(150px);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(150px);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(150px);
+}
+
+#bottom:checked ~ .cube-container .cube {
+  transform: rotateX(90deg);
+  transition: all 0.95s cubic-bezier(1, -0.5, 0.5, 1.1);
+}
+
+#top:checked ~ .cube-container .cube {
+  transform: rotateX(-90deg);
+  transition: all 0.95s cubic-bezier(1, -0.5, 0.5, 1.1);
+}
+
+#left:checked ~ .cube-container .cube {
+  transform: rotateY(90deg);
+  transition: all 0.95s cubic-bezier(1, -0.5, 0.5, 1.1);
+}
+#right:checked ~ .cube-container .cube {
+  transform: rotateY(-90deg);
+  transition: all 0.95s cubic-bezier(1, -0.5, 0.5, 1.1);
+}
+#back:checked ~ .cube-container .cube {
+  transform: rotateY(180deg);
+  transition: all 0.95s cubic-bezier(1, -0.5, 0.5, 1.1);
+}
+#front:checked ~ .cube-container .cube {
+  transform: rotateX(-15deg) rotateY(15deg);
+  transition: all 0.95s cubic-bezier(1, -0.5, 0.5, 1.1);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 0.5rem;
+  border: 1px solid lightgray;
+  color: #ffffff;
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.1);
+  background-color: rgba(124, 128, 140, 0.722);
+  text-align: center;
+}
+
+.btn:hover {
+  box-shadow: 0 0 0 1px gray;
+  cursor: pointer;
+}
